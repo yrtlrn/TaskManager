@@ -1,0 +1,27 @@
+{
+  "name": "taskmanager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "postcss -w public/styles/tailwind.css -o public/styles/index.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.5",
+    "express": "^4.18.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.1.0",
+    "nodemon": "^3.0.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.17",
+    "install": "^0.13.0",
+    "npm": "^10.3.0",
+    "tailwindcss": "^3.4.1"
+  }
+}

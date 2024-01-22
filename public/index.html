@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link href="./styles/index.css" rel="stylesheet" />
+  </head>
+  <body class="bg-slate-400 min-h-screen">
+    <main>
+      <section
+        class="mt-32 w-[500px] min-h-28 m-auto bg-red-200 flex flex-col items-center"
+      >
+        <h1 class="text-3xl font-bold mt-3 mb-3">Task Manager</h1>
+        <form>
+          <input
+            type="text"
+            placeholder="e.g Wash Dishes"
+            class="rounded-lg p-1"
+            name="newTask"
+          />
+          <button type="submit" class="bg-yellow-200 p-1 rounded-md">
+            Add
+          </button>
+          
+        </form>
+      </section>
+      <section class="allTasks w-[500px] m-auto bg-white mt-5 tasks">
+
+      </section>
+    </main>
+    <!-- Axios -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- JS -->
+    <script src="./index.js"></script>
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/96aad22a56.js" crossorigin="anonymous"></script>
+  </body>
+</html>

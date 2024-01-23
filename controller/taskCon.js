@@ -25,7 +25,7 @@ const deleteTask = async (req, res) => {
     if (task) {
       await Tasks.findOneAndDelete({ _id: req.params.id });
       res.status(201).json({ task });
-      return
+      return;
     }
     res.status(404).json({ msg: 'Task not found' });
   } catch (error) {
@@ -33,18 +33,43 @@ const deleteTask = async (req, res) => {
   }
 };
 
-const editTask = async (req,res) => {
-  
-}
+const getSingleTask = async (req, res) => {
+  try {
+    const task = await Tasks.findById(req.params.id);
+    if (task) {
+      res.status(200).json(task);
+      return;
+    }
+    res.status(404).json({ msg: 'Task not found' });
+  } catch (error) {
+    res.status(500).json({ msg: error.message });
+  }
+};
 
-const updateTask = async (req,res) => {
-  
-}
+const updateTask = async (req, res) => {
+  try {
+    const task = await Tasks.findById(req.params.id);
+    const newData = req.body.data;
+    if (task) {
+      await Tasks.findByIdAndUpdate(
+        task._id,
+        {
+          name: newData.newTask,
+          completed: newData.tascheckboxStatus,
+        },
+        { runValidators: true }
+      );
+      res.status(200).json(task);
+      return;
+    }
+    console.log('Task not found - backend');
+  } catch (error) {}
+};
 
 module.exports = {
   createTask,
   getTasks,
   deleteTask,
-  editTask,
-  updateTask
+  getSingleTask,
+  updateTask,
 };

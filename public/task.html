@@ -6,6 +6,11 @@
     <title>Tasks</title>
     <link rel="stylesheet" href="./styles/normalize.css" />
     <link rel="stylesheet" href="./styles/index.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
   </head>
   <body class="bg-slate-400 min-h-screen">
     <main>
@@ -22,13 +27,13 @@
               <p class="mb-3">Completed:</p>
             </div>
             <div class="text-lg pb-3">
-              <p class="mb-3">123123123</p>
+              <p class="mb-3 id">123123123</p>
               <input
                 type="text"
                 value="Walk the dog"
-                class="block mb-3 border-2 border-black rounded-md px-2"
+                class="block mb-3 border-2 border-black rounded-md px-2 task"
               />
-              <input type="checkbox" class="mb-3" />
+              <input type="checkbox" class="mb-3 checkbox" />
             </div>
           </div>
           <button
@@ -37,6 +42,12 @@
           >
             Edit
           </button>
+
+          <a
+            href="/"
+            class="block bg-red-200 w-full mb-3 rounded-md text-center"
+            >Task List</a
+          >
         </form>
       </section>
     </main>
@@ -49,5 +60,9 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="./task.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
   </body>
 </html>

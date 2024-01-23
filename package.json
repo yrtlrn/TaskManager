@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "start npm run app && start npm run build:css",
-    "app": "nodemon app.js",
+    "start": "nodemon app.js",
     "build:css": "postcss -w public/styles/tailwind.css -o public/styles/index.css"
   },
   "keywords": [],

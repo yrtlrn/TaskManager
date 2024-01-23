@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasks</title>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+  </head>
+  <body class="bg-slate-400 min-h-screen">
+    <main>
+      <section
+        class="mt-32 w-[500px] min-h-28 m-auto bg-white border rounded-lg shadow-md flex flex-col items-center"
+      >
+        <h1 class="text-3xl">Edit Task</h1>
+        <hr />
+        <form>
+          <div class="flex">
+            <div class="mr-5 text-lg">
+              <p class="mb-3">Id:</p>
+              <p class="mb-3">Task:</p>
+              <p class="mb-3">Completed:</p>
+            </div>
+            <div class="text-lg pb-3">
+              <p class="mb-3">123123123</p>
+              <input
+                type="text"
+                value="Walk the dog"
+                class="block mb-3 border-2 border-black rounded-md px-2"
+              />
+              <input type="checkbox" class="mb-3" />
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="block bg-red-200 w-full mb-3 rounded-md hover:bg-red-400"
+          >
+            Edit
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Axios -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./task.js"></script>
+  </body>
+</html>

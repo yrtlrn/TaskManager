@@ -13,7 +13,7 @@ const showAllTask = async () => {
       <div class="flex mb-5 justify-between bg-white rounded-lg p-2">
         <h2>${task.name}</h2>
         <div class="text-red-800">
-          <a href="/tasks/${task._id}">
+          <a href="task.html?id=${task._id}">
             <i class="fa-solid fa-pen-to-square mr-5"></i>
           </a>
           <button class="deleteBtn" id="${task._id}">

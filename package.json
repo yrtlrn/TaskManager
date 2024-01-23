@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "start npm run app && start npm run build:css",
+    "app": "nodemon app.js",
     "build:css": "postcss -w public/styles/tailwind.css -o public/styles/index.css"
   },
   "keywords": [],

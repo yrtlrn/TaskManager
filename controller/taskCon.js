@@ -42,7 +42,7 @@ const getSingleTask = async (req, res) => {
     }
     res.status(404).json({ msg: 'Task not found' });
   } catch (error) {
-    res.status(500).json({ msg: error.message });
+    res.status(404).json({ msg: "Task not found" });
   }
 };
 
@@ -55,7 +55,7 @@ const updateTask = async (req, res) => {
         task._id,
         {
           name: newData.newTask,
-          completed: newData.tascheckboxStatus,
+          completed: newData.checkboxStatus,
         },
         { runValidators: true }
       );
@@ -63,7 +63,9 @@ const updateTask = async (req, res) => {
       return;
     }
     console.log('Task not found - backend');
-  } catch (error) {}
+  } catch (error) {
+    res.status(500).json({ msg: error.message });
+  }
 };
 
 module.exports = {
